@@ -1,7 +1,7 @@
 -- modified by lxs --
 
 
-getgenv().Enabled = true
+getgenv().Enabled = false
 getgenv().Aimlockkey = "q"
 getgenv().Prediction = 0.11529944882
 getgenv().Aimpart = "HumanoidRootPart"

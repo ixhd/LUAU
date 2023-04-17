@@ -3,7 +3,6 @@ getgenv().textService = game:GetService"TextService"
 getgenv().inputService = game:GetService"UserInputService"
 getgenv().tweenService = game:GetService"TweenService"
 
-makefolder("ape.wtf")
 
 if getgenv().library then
     getgenv().library:Unload()
@@ -144,6 +143,7 @@ end
 
 function library:GetConfigs()
     if not isfolder(self.foldername) then
+        makefolder("ape.wtf")
         makefolder("ape.wtf/"..self.foldername)
         return {}
     end

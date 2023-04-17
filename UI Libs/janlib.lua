@@ -149,10 +149,10 @@ function library:GetConfigs()
     end
     local files = {}
     local a = 0
-    for i,v in next, listfiles(self.foldername) do
+    for i,v in next, listfiles("ape.wtf" .. "/" .. self.foldername) do
         if v:sub(#v - #self.fileext + 1, #v) == self.fileext then
             a = a + 1
-            v = v:gsub(self.foldername .. "\\", "")
+            v = v:gsub("ape.wtf" .. "/" .. self.foldername .. "\\", "")
             v = v:gsub(self.fileext, "")
             table.insert(files, a, v)
         end

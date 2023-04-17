@@ -142,9 +142,9 @@ function library:SaveConfig(config)
 end
 
 function library:GetConfigs()
-    if not isfolder(self.foldername) then
+    if not isfolder("ape.wtf") then
         makefolder("ape.wtf")
-        makefolder("ape.wtf/"..tostring(self.foldername))
+        makefolder("ape.wtf/"..self.foldername)
         return {}
     end
     local files = {}

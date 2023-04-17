@@ -3,12 +3,11 @@ getgenv().textService = game:GetService"TextService"
 getgenv().inputService = game:GetService"UserInputService"
 getgenv().tweenService = game:GetService"TweenService"
 
-
 if getgenv().library then
     getgenv().library:Unload()
 end
 
-local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = "ape.wtf", open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = "configs", fileext = ".cfg"}
+local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = "ape.wtf", open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = "ape.wtf/configs", fileext = ".txt"}
 getgenv().library = library
 
 --Locals

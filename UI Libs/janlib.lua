@@ -143,16 +143,14 @@ end
 function library:GetConfigs()
     if not isfolder("ape.wtf") then
         makefolder("ape.wtf")
-        if not isfolder("ape.wtf" .. "/" .. self.foldername) then
-            makefolder("ape.wtf" .. "/" .. self.foldername)
-        end    
+        makefolder("ape.wtf" .. "/" .. self.foldername) 
     end
     local files = {}
     local a = 0
     for i,v in next, listfiles("ape.wtf" .. "/" .. self.foldername) do
         if v:sub(#v - #self.fileext + 1, #v) == self.fileext then
             a = a + 1
-            v = v:gsub("ape.wtf" .. "/" .. self.foldername .. "\\", "")
+            v = v:gsub(self.foldername .. "\\", "")
             v = v:gsub(self.fileext, "")
             table.insert(files, a, v)
         end

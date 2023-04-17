@@ -3,11 +3,13 @@ getgenv().textService = game:GetService"TextService"
 getgenv().inputService = game:GetService"UserInputService"
 getgenv().tweenService = game:GetService"TweenService"
 
+makefolder("ape.wtf")
+
 if getgenv().library then
     getgenv().library:Unload()
 end
 
-local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = "ape.wtf", open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = "ape", fileext = ".cfg"}
+local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = "ape.wtf", open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = "configs", fileext = ".cfg"}
 getgenv().library = library
 
 --Locals
@@ -142,7 +144,7 @@ end
 
 function library:GetConfigs()
     if not isfolder(self.foldername) then
-        makefolder(self.foldername)
+        makefolder("ape.wtf/"..self.foldername)
         return {}
     end
     local files = {}

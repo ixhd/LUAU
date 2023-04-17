@@ -144,7 +144,7 @@ end
 function library:GetConfigs()
     if not isfolder(self.foldername) then
         makefolder("ape.wtf")
-        makefolder("ape.wtf/"..self.foldername)
+        makefolder("ape.wtf/"..tostring(self.foldername))
         return {}
     end
     local files = {}

@@ -87,7 +87,7 @@ end
 
 function library:LoadConfig(config)
     if table.find(self:GetConfigs(), config) then
-        local Read, Config = pcall(function() return game:GetService"HttpService":JSONDecode(readfile("ape.wtf" .. "/" .. self.foldername .. "/" .. config .. self.fileext)) end)
+        local Read, Config = pcall(function() return game:GetService"HttpService":JSONDecode(readfile(self.foldername .. "/" .. config .. self.fileext)) end)
         Config = Read and Config or {}
         for _, option in next, self.options do
             if option.hasInit then
@@ -115,7 +115,7 @@ end
 function library:SaveConfig(config)
     local Config = {}
     if table.find(self:GetConfigs(), config) then
-        Config = game:GetService"HttpService":JSONDecode(readfile("ape.wtf" .. "/" .. self.foldername .. "/" .. config .. self.fileext))
+        Config = game:GetService"HttpService":JSONDecode(readfile(self.foldername .. "/" .. config .. self.fileext))
     end
     for _, option in next, self.options do
         if option.type ~= "button" and option.flag and not option.skipflag then
@@ -137,17 +137,16 @@ function library:SaveConfig(config)
             end
         end
     end
-    writefile("ape.wtf" .. "/" .. self.foldername .. "/" .. config .. self.fileext, game:GetService"HttpService":JSONEncode(Config))
+    writefile(self.foldername .. "/" .. config .. self.fileext, game:GetService"HttpService":JSONEncode(Config))
 end
 
 function library:GetConfigs()
-    if not isfolder("ape.wtf") then
-        makefolder("ape.wtf")
-        makefolder("ape.wtf" .. "/" .. self.foldername) 
+    if not isfolder(self.foldername) then
+        makefolder(self.foldername) 
     end
     local files = {}
     local a = 0
-    for i,v in next, listfiles("ape.wtf" .. "/" .. self.foldername) do
+    for i,v in next, listfiles(self.foldername) do
         if v:sub(#v - #self.fileext + 1, #v) == self.fileext then
             a = a + 1
             v = v:gsub(self.foldername .. "\\", "")

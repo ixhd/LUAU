@@ -119,6 +119,8 @@ function library:AddWindow(title)
     cutForms.Position = UDim2.new(0, 0, 0.0849220082, 0)
     cutForms.Size = UDim2.new(0, 476, 0, 1)
 
+    local window = {}
+
     function window:AddTab(name)
         name = name or "New Tab"
 

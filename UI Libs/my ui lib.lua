@@ -1,7 +1,6 @@
 local library = {}
 
-function library:AddWindow(title)
-    title = title or "New"
+function library:AddWindow()
 
     local ScreenGui = Instance.new("ScreenGui")
     local BackgroundDesign = Instance.new("Frame")
@@ -61,7 +60,7 @@ function library:AddWindow(title)
     Header.Position = UDim2.new(0.289915979, 0, 0, 0)
     Header.Size = UDim2.new(0, 476, 0, 22)
     Header.Font = Enum.Font.Jura
-    Header.Text = title
+    Header.Text = "v"
     Header.TextColor3 = Color3.fromRGB(255, 255, 255)
     Header.TextSize = 16.000
     Header.TextStrokeColor3 = Color3.fromRGB(16, 16, 16)
@@ -121,9 +120,7 @@ function library:AddWindow(title)
 
     local window = {}
 
-    function window:AddTab(name)
-        name = name or "New Tab"
-
+    function window:AddTab()
         local btnTab = Instance.new("TextButton")
         local cut_button_tab = Instance.new("Frame")
         local Layout = Instance.new("UIListLayout")
@@ -138,7 +135,7 @@ function library:AddWindow(title)
         btnTab.Size = UDim2.new(0, 70, 0, 22)
         btnTab.AutoButtonColor = false
         btnTab.Font = Enum.Font.Jura
-        btnTab.Text = name
+        btnTab.Text = "x"
         btnTab.TextColor3 = Color3.fromRGB(255, 255, 255)
         btnTab.TextSize = 14.000
         btnTab.TextStrokeColor3 = Color3.fromRGB(16, 16, 16)

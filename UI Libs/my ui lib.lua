@@ -117,61 +117,55 @@ function library:AddWindow()
     cutForms.LayoutOrder = 4
     cutForms.Position = UDim2.new(0, 0, 0.0849220082, 0)
     cutForms.Size = UDim2.new(0, 476, 0, 1)
-
-    local window = {}
-
-    function window:AddTab()
-        local btnTab = Instance.new("TextButton")
-        local cut_button_tab = Instance.new("Frame")
-        local Layout = Instance.new("UIListLayout")
-        local Form = Instance.new("Frame")
-        local Layout_2 = Instance.new("UIListLayout")
-
-        btnTab.Name = "btnTab"
-        btnTab.Parent = Tabs
-        btnTab.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
-        btnTab.BorderColor3 = Color3.fromRGB(50, 50, 50)
-        btnTab.Position = UDim2.new(0.0126050422, 0, 0.239999995, 0)
-        btnTab.Size = UDim2.new(0, 70, 0, 22)
-        btnTab.AutoButtonColor = false
-        btnTab.Font = Enum.Font.Jura
-        btnTab.Text = "x"
-        btnTab.TextColor3 = Color3.fromRGB(255, 255, 255)
-        btnTab.TextSize = 14.000
-        btnTab.TextStrokeColor3 = Color3.fromRGB(16, 16, 16)
-        btnTab.TextStrokeTransparency = 0.300
-        btnTab.TextWrapped = true
-
-        Layout.Name = "Layout"
-        Layout.Parent = btnTab
-        Layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-        Layout.SortOrder = Enum.SortOrder.LayoutOrder
-        Layout.VerticalAlignment = Enum.VerticalAlignment.Bottom
-
-        cut_button_tab.Name = "cut_button_tab"
-        cut_button_tab.Parent = btnTab
-        cut_button_tab.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
-        cut_button_tab.BorderColor3 = Color3.fromRGB(27, 27, 27)
-        cut_button_tab.Position = UDim2.new(0, 0, 1, 0)
-        cut_button_tab.Size = UDim2.new(0, 66, 0, 1)
-        cut_button_tab.ZIndex = 2
-
-        
-        Form.Name = "Form"
-        Form.Parent = Forms
-        Form.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
-        Form.BorderSizePixel = 0
-        Form.LayoutOrder = 5
-        Form.Size = UDim2.new(0, 476, 0, 532)
-
-        Layout_2.Name = "Layout"
-        Layout_2.Parent = Form
-        Layout_2.FillDirection = Enum.FillDirection.Horizontal
-        Layout_2.SortOrder = Enum.SortOrder.LayoutOrder
-        Layout_2.VerticalAlignment = Enum.VerticalAlignment.Cente
-    end
-
-    return window
 end
 
-return library
+function window:AddTab()
+    local btnTab = Instance.new("TextButton")
+    local cut_button_tab = Instance.new("Frame")
+    local Layout = Instance.new("UIListLayout")
+    local Form = Instance.new("Frame")
+    local Layout_2 = Instance.new("UIListLayout")
+
+    btnTab.Name = "btnTab"
+    btnTab.Parent = Tabs
+    btnTab.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+    btnTab.BorderColor3 = Color3.fromRGB(50, 50, 50)
+    btnTab.Position = UDim2.new(0.0126050422, 0, 0.239999995, 0)
+    btnTab.Size = UDim2.new(0, 70, 0, 22)
+    btnTab.AutoButtonColor = false
+    btnTab.Font = Enum.Font.Jura
+    btnTab.Text = "x"
+    btnTab.TextColor3 = Color3.fromRGB(255, 255, 255)
+    btnTab.TextSize = 14.000
+    btnTab.TextStrokeColor3 = Color3.fromRGB(16, 16, 16)
+    btnTab.TextStrokeTransparency = 0.300
+    btnTab.TextWrapped = true
+
+    Layout.Name = "Layout"
+    Layout.Parent = btnTab
+    Layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    Layout.SortOrder = Enum.SortOrder.LayoutOrder
+    Layout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+
+    cut_button_tab.Name = "cut_button_tab"
+    cut_button_tab.Parent = btnTab
+    cut_button_tab.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+    cut_button_tab.BorderColor3 = Color3.fromRGB(27, 27, 27)
+    cut_button_tab.Position = UDim2.new(0, 0, 1, 0)
+    cut_button_tab.Size = UDim2.new(0, 66, 0, 1)
+    cut_button_tab.ZIndex = 2
+
+        
+    Form.Name = "Form"
+    Form.Parent = Forms
+    Form.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+    Form.BorderSizePixel = 0
+    Form.LayoutOrder = 5
+    Form.Size = UDim2.new(0, 476, 0, 532)
+
+    Layout_2.Name = "Layout"
+    Layout_2.Parent = Form
+    Layout_2.FillDirection = Enum.FillDirection.Horizontal
+    Layout_2.SortOrder = Enum.SortOrder.LayoutOrder
+    Layout_2.VerticalAlignment = Enum.VerticalAlignment.Cente
+end

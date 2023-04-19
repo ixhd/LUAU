@@ -1,6 +1,8 @@
 local library = {}
 
 function library:AddWindow(title)
+    title = title or "New"
+
     local ScreenGui = Instance.new("ScreenGui")
     local BackgroundDesign = Instance.new("Frame")
     local InnerDesign = Instance.new("Frame")

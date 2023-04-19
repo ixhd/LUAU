@@ -119,7 +119,7 @@ function library:AddWindow()
     cutForms.Size = UDim2.new(0, 476, 0, 1)
 end
 
-function window:AddTab()
+function library:AddTab()
     local btnTab = Instance.new("TextButton")
     local cut_button_tab = Instance.new("Frame")
     local Layout = Instance.new("UIListLayout")

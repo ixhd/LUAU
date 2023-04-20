@@ -19,7 +19,7 @@ function library:AddWindow()
     local cutForms = Instance.new("Frame")
     local Forms = Instance.new("Frame")
 
-    ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    ScreenGui.Parent = game:GetService("CoreGui")
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     BackgroundDesign.Name = "BackgroundDesign"
